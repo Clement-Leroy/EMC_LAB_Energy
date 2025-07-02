@@ -42,7 +42,8 @@ external_scripts = ["https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery
 
 external_stylesheets = [dbc.themes.BOOTSTRAP, 'https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css']
 
-app = dash.Dash(__name__, include_assets_files=True, external_scripts=external_scripts, external_stylesheets=external_stylesheets)
+server = Flask(__name__)
+app = dash.Dash(server=server, include_assets_files=True, external_scripts=external_scripts, external_stylesheets=external_stylesheets)
 app.secret_key = 'super secret key'
 app.title = "MPS | EMC Lab Energy"
 app._favicon = ("icon_MPS.ico")
