@@ -417,4 +417,4 @@ def date_range_chart(start_date, end_date, figure, value, scale):
     return figure, filtered_data
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=8050)
+    app.run_server(debug=True, host='0.0.0.0', port=8050)
