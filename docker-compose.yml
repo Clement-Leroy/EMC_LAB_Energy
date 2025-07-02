@@ -16,6 +16,8 @@ services:
     environment:
       MYSQL_DATABASE: emc_lab_energy
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
     volumes:
       - ./init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
       - app-data:/var/lib/mysql
