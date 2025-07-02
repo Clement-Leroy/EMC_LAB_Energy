@@ -1,0 +1,9 @@
+gunicorn
+dash
+dash_bootstrap_components
+dash_auth
+plotly
+pandas
+pymysql
+cryptography
+mysql
