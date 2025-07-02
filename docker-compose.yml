@@ -7,7 +7,7 @@ services:
     ports:
       - "8050:8050"
     depends_on:
-      - db
+      - database
 
   database:
     image: mysql:8
