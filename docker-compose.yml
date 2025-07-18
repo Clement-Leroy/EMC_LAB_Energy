@@ -3,16 +3,16 @@ version: '3.8'
 services:
   app:
     build: ./python/
-    container_name: application
+    container_name: emc_lab_energy_application
     ports:
-      - "8050:8050"
+      - "8002:8002"
     depends_on:
       - database
 
   database:
     image: mysql:8
     restart: always
-    container_name: database
+    container_name: emc_lab_energy_database
     environment:
       MYSQL_DATABASE: emc_lab_energy
       MYSQL_ROOT_PASSWORD: root
